@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Jazeera Cafe Restaurant & Hotel | Bungoma's Halal Dining Experience</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="100% Halal restaurant, guest rooms, WiFi, and football lounge in Bungoma, Kenya. Family-owned. Open daily 6am-11pm. Book now: +254 700 488888">
+    <meta name="keywords" content="halal restaurant Bungoma, guest house Bungoma, rooms Bungoma, football lounge, Swahili cuisine, catering Bungoma, hotel Bungoma">
+    <meta name="author" content="Al Jazeera Cafe">
+    <meta property="og:title" content="Al Jazeera Cafe Restaurant & Hotel - Bungoma">
+    <meta property="og:description" content="100% Halal restaurant, clean guest rooms, WiFi, and football lounge in Bungoma">
+    <meta property="og:type" content="website">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "@id": "https://al-jazeera-cafe-bungoma.github.io/#restaurant",
+      "name": "Al Jazeera Cafe Restaurant & Hotel",
+      "description": "Family-owned 100% Halal restaurant, guest house, and football lounge in Bungoma, Kenya. Offering authentic Swahili cuisine, clean rooms, free WiFi, and vibrant sports viewing.",
+      "url": "https://al-jazeera-cafe-bungoma.github.io",
+      "servesCuisine": ["Kenyan", "Swahili", "Halal", "Somali", "Coastal"],
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "HH76+269",
+        "addressLocality": "Bungoma",
+        "addressRegion": "Western Kenya",
+        "addressCountry": "KE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "0.5695",
+        "longitude": "34.5584"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "06:00",
+          "closes": "23:00"
+        }
+      ],
+      "telephone": "+254700488888",
+      "image": [
+        "https://al-jazeera-cafe-bungoma.github.io/og-image.jpg"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127"
+      },
+      "hasMenu": "https://al-jazeera-cafe-bungoma.github.io/#menu",
+      "makesOffer": [{
+        "@type": "Offer",
+        "name": "Friday Biryani Special",
+        "description": "Special Biryani available every Friday"
+      }]
+    }
+    </script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍛</text></svg>">
+    
+    <style>
+    /* ===== CSS RESET & BASE STYLES ===== */
+    * { 
+        margin: 0; 
+        padding: 0; 
+        box-sizing: border-box; 
+    }
+
+    :root {
+        --primary: #C41E3A; /* Al Jazeera Red */
+        --primary-dark: #9A162E;
+        --secondary: #F59E0B; /* Golden Accent */
+        --secondary-light: #FBBF24;
+        --dark: #0a0a0a;
+        --dark-light: #1a1a1a;
+        --light: #f8f9fa;
+        --gray: #9CA3AF;
+        --success: #10B981;
+        --whatsapp: #25D366;
+        --glass-bg: rgba(255, 255, 255, 0.07);
+        --glass-border: rgba(255, 255, 255, 0.15);
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        background: var(--dark);
+        color: var(--light);
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* ===== GLASSMORPHISM STYLES ===== */
+    .glass {
+        background: var(--glass-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid var(--glass-border);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ===== KILLER HEADER STRIP ===== */
+    .top-header-strip {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1100;
+        padding: 10px 0;
+        background: rgba(10, 10, 10, 0.92);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+        font-size: 0.9rem;
+    }
+
+    .top-header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .top-header-tagline {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+    }
+
+    .top-header-tagline span {
+        color: var(--secondary);
+    }
+
+    .top-header-cta a {
+        background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+        color: var(--dark);
+        padding: 6px 18px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.85rem;
+        transition: all 0.3s;
+        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    }
+
+    .top-header-cta a:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+    }
+
+    /* ===== NAVIGATION ===== */
+    .navbar {
+        position: fixed;
+        top: 42px;
+        width: 100%;
+        z-index: 1000;
+        padding: 15px 0;
+        transition: all 0.3s;
+    }
+
+    .navbar.scrolled {
+        top: 0;
+        background: rgba(10, 10, 10, 0.98);
+        backdrop-filter: blur(15px);
+        border-bottom: 2px solid var(--secondary);
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+    }
+
+    .logo-icon {
+        font-size: 2.5rem;
+        color: var(--secondary);
+        background: var(--glass-bg);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        border: 2px solid var(--glass-border);
+    }
+
+    .logo-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-main {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--secondary);
+        letter-spacing: 1px;
+    }
+
+    .logo-sub {
+        font-size: 0.85rem;
+        color: var(--gray);
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .nav-link {
+        color: var(--light);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 6px;
+        transition: all 0.3s;
+        font-size: 0.95rem;
+        position: relative;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background: var(--secondary);
+        transition: width 0.3s;
+    }
+
+    .nav-link:hover::after, .nav-link.active::after {
+        width: 70%;
+    }
+
+    .nav-link:hover, .nav-link.active {
+        color: var(--secondary);
+    }
+
+    .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--light);
+        font-size: 1.8rem;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+    }
+
+    .mobile-toggle:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-top: 120px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.9)), 
+                    url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 60px 40px;
+        border-radius: 24px;
+        position: relative;
+    }
+
+    .hero-badge {
+        display: inline-block;
+        background: rgba(196, 30, 58, 0.2);
+        color: var(--primary);
+        padding: 8px 20px;
+        border-radius: 25px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+        border: 1px solid rgba(196, 30, 58, 0.3);
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, var(--secondary), #FFD700);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+        color: var(--gray);
+        margin-bottom: 35px;
+        max-width: 700px;
+    }
+
+    .hero-highlights {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .highlight-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1rem;
+    }
+
+    .highlight-item i {
+        color: var(--secondary);
+        font-size: 1.2rem;
+    }
+
+    .hero-cta {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    /* ===== BUTTON STYLES ===== */
+    .btn {
+        padding: 16px 32px;
+        border-radius: 12px;
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: all 0.3s;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+        min-width: 180px;
+        text-align: center;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+        color: var(--dark);
+        box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--light);
+        border: 2px solid var(--secondary);
+    }
+
+    .btn-secondary:hover {
+        background: rgba(245, 158, 11, 0.1);
+        transform: translateY(-3px);
+    }
+
+    .btn-whatsapp {
+        background: var(--whatsapp);
+        color: white;
+    }
+
+    .btn-whatsapp:hover {
+        background: #128C7E;
+        transform: translateY(-3px);
+    }
+
+    /* ===== SECTIONS COMMON STYLES ===== */
+    section {
+        padding: 100px 0;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 15px;
+        color: var(--secondary);
+        position: relative;
+        display: inline-block;
+    }
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--secondary);
+        border-radius: 2px;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+        color: var(--gray);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* ===== MENU SECTION ===== */
+    .menu-section {
+        background: var(--dark-light);
+    }
+
+    .menu-filters {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        padding: 12px 28px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--light);
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+        background: var(--secondary);
+        color: var(--dark);
+        border-color: var(--secondary);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(245, 158, 11, 0.2);
+    }
+
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .menu-card {
+        padding: 30px;
+        border-radius: 20px;
+        transition: all 0.4s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .menu-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        border-color: var(--secondary);
+    }
+
+    .menu-category {
+        display: inline-block;
+        padding: 8px 20px;
+        background: rgba(245, 158, 11, 0.15);
+        color: var(--secondary);
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .menu-item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .menu-item-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--light);
+    }
+
+    .menu-price {
+        color: var(--success);
+        font-weight: 800;
+        font-size: 1.3rem;
+        background: rgba(16, 185, 129, 0.1);
+        padding: 6px 15px;
+        border-radius: 10px;
+        border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .menu-description {
+        color: var(--gray);
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+
+    .menu-actions {
+        display: flex;
+        gap: 15px;
+    }
+
+    /* ===== WHAT WE OFFER SECTION ===== */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    .service-card {
+        padding: 40px 30px;
+        text-align: center;
+        border-radius: 20px;
+        transition: all 0.3s;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .service-icon {
+        font-size: 3.5rem;
+        color: var(--secondary);
+        margin-bottom: 25px;
+    }
+
+    .service-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: var(--light);
+    }
+
+    .service-desc {
+        color: var(--gray);
+        margin-bottom: 25px;
+        line-height: 1.7;
+    }
+
+    /* ===== FOOTBALL ZONE ===== */
+    .football-section {
+        background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(30, 30, 30, 0.95)),
+                    url('https://images.unsplash.com/photo-1575361204480-aadea25e6e68?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .football-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 60px 40px;
+        border-radius: 24px;
+    }
+
+    .match-countdown {
+        margin: 40px 0;
+        padding: 30px;
+        border-radius: 20px;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .countdown-title {
+        font-size: 1.3rem;
+        color: var(--secondary);
+        margin-bottom: 20px;
+    }
+
+    .countdown-timer {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .countdown-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .countdown-number {
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: var(--secondary);
+        line-height: 1;
+        min-width: 80px;
+        text-align: center;
+    }
+
+    .countdown-label {
+        font-size: 0.9rem;
+        color: var(--gray);
+        margin-top: 8px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* ===== CONTACT & BOOKING ===== */
+    .contact-section {
+        background: var(--dark-light);
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        margin-top: 50px;
+    }
+
+    .contact-info {
+        padding: 40px;
+        border-radius: 20px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(245, 158, 11, 0.15);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--secondary);
+        font-size: 1.3rem;
+        flex-shrink: 0;
+    }
+
+    .contact-details h4 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        color: var(--light);
+    }
+
+    .contact-details p {
+        color: var(--gray);
+        line-height: 1.6;
+    }
+
+    .booking-form {
+        padding: 40px;
+        border-radius: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-label {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--light);
+        font-weight: 600;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 16px 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        color: var(--light);
+        font-size: 1rem;
+        transition: all 0.3s;
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: var(--secondary);
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+        background: #050505;
+        padding-top: 80px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 50px;
+        margin-bottom: 60px;
+    }
+
+    .footer-col h4 {
+        color: var(--secondary);
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+    .footer-col h4::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: var(--secondary);
+    }
+
+    .footer-col p {
+        color: var(--gray);
+        margin-bottom: 25px;
+        line-height: 1.7;
+    }
+
+    .footer-links {
+        list-style: none;
+    }
+
+    .footer-links li {
+        margin-bottom: 12px;
+    }
+
+    .footer-links a {
+        color: var(--gray);
+        text-decoration: none;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-links a:hover {
+        color: var(--secondary);
+        transform: translateX(5px);
+    }
+
+    .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        color: var(--light);
+        text-decoration: none;
+        transition: all 0.3s;
+        font-size: 1.2rem;
+    }
+
+    .social-links a:hover {
+        background: var(--secondary);
+        color: var(--dark);
+        transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding: 30px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        color: var(--gray);
+        font-size: 0.9rem;
+    }
+
+    /* ===== FLOATING UI ELEMENTS ===== */
+    .whatsapp-float {
+        position: fixed;
+        left: 20px;
+        bottom: 100px;
+        width: 65px;
+        height: 65px;
+        background: var(--whatsapp);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        z-index: 999;
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.1) rotate(10deg);
+        box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+    }
+
+    #scrollTopBtn {
+        position: fixed;
+        right: 20px;
+        bottom: 30px;
+        background: rgba(245, 158, 11, 0.9);
+        color: var(--dark);
+        border: none;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 998;
+        display: none;
+        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+        transition: all 0.3s;
+    }
+
+    #scrollTopBtn:hover {
+        background: var(--secondary);
+        transform: translateY(-5px);
+    }
+
+    /* ===== LOADER ===== */
+    .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--dark);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    .loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .spinner {
+        width: 70px;
+        height: 70px;
+        border: 5px solid rgba(245, 158, 11, 0.2);
+        border-radius: 50%;
+        border-top-color: var(--secondary);
+        animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 992px) {
+        .hero-title { font-size: 2.8rem; }
+        .section-title { font-size: 2.3rem; }
+        .menu-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+    }
+
+    @media (max-width: 768px) {
+        .top-header-content { justify-content: center; }
+        .top-header-tagline { justify-content: center; }
+        
+        .nav-menu {
+            display: none;
+            position: fixed;
+            top: 120px;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(15px);
+            flex-direction: column;
+            padding: 30px 20px;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        .nav-menu.active {
+            display: flex;
+        }
+        
+        .mobile-toggle { display: flex; }
+        
+        .hero { padding-top: 140px; }
+        .hero-title { font-size: 2.3rem; }
+        .hero-subtitle { font-size: 1.1rem; }
+        
+        .hero-cta { flex-direction: column; }
+        .btn { width: 100%; min-width: auto; }
+        
+        .section-title { font-size: 2rem; }
+        
+        .menu-grid { grid-template-columns: 1fr; }
+        
+        .whatsapp-float {
+            left: 15px;
+            bottom: 90px;
+            width: 60px;
+            height: 60px;
+            font-size: 28px;
+        }
+        
+        #scrollTopBtn {
+            right: 15px;
+            bottom: 25px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .top-header-strip { font-size: 0.8rem; }
+        .hero-content { padding: 40px 20px; }
+        .hero-title { font-size: 2rem; }
+        .hero-subtitle { font-size: 1rem; }
+        .section-title { font-size: 1.8rem; }
+        .contact-grid { grid-template-columns: 1fr; }
+    }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Killer Header Strip -->
+    <div class="top-header-strip">
+        <div class="container top-header-content">
+            <div class="top-header-tagline">
+                <span>🇰🇪</span>
+                <span>BUNGOMA'S ICONIC SWAHILI RESTAURANT</span>
+                <span>•</span>
+                <span>100% HALAL</span>
+                <span>•</span>
+                <span>OPEN DAILY 6AM–11PM</span>
+            </div>
+            <div class="top-header-cta">
+                <a href="https://wa.me/254700488888" target="_blank">
+                    <i class="fab fa-whatsapp"></i> BOOK VIA WHATSAPP
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">AL JAZEERA CAFE</span>
+                    <span class="logo-sub">RESTAURANT & HOTEL • BUNGOMA</span>
+                </div>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">Our Story</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#football" class="nav-link">Football Zone</a>
+                <a href="#contact" class="nav-link">Book Now</a>
+            </div>
+            
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content glass">
+                <span class="hero-badge">🏆 FAMILY OWNED SINCE 2015</span>
+                <h1 class="hero-title">
+                    Bungoma's Home Away From Home
+                </h1>
+                <p class="hero-subtitle">
+                    Where authentic Swahili cuisine meets warm hospitality. Experience 100% halal dining, 
+                    comfortable guest rooms, and Bungoma's best football viewing spot—all served with heart.
+                </p>
+                
+                <div class="hero-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>100% Halal Certified</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Free High-Speed WiFi</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Clean & Comfortable Rooms</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Open Late for Match Nights</span>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="#menu" class="btn btn-primary">
+                        <i class="fas fa-utensils"></i> View Full Menu
+                    </a>
+                    <a href="https://wa.me/254700488888" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Booking
+                    </a>
+                    <a href="tel:+254700488888" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i> Call +254 700 488888
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Story</h2>
+                <p class="section-subtitle">
+                    From a small family kitchen to Bungoma's beloved community hub
+                </p>
+            </div>
+            
+            <div class="about-content glass" style="padding: 50px; border-radius: 24px;">
+                <div style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h3 style="color: var(--secondary); font-size: 1.8rem; margin-bottom: 20px;">
+                            "We cook what we would serve our own family"
+                        </h3>
+                        <p style="color: var(--gray); margin-bottom: 25px; line-height: 1.8;">
+                            Founded in 2015 by the Sharif family, Al Jazeera Cafe began as a dream to bring 
+                            authentic Swahili coastal flavors to Bungoma. What started with just three signature 
+                            dishes—Pilau, Ugali na Nyama, and our famous Biryani—has grown into a beloved 
+                            community institution.
+                        </p>
+                        <p style="color: var(--gray); margin-bottom: 25px; line-height: 1.8;">
+                            Every meal is prepared with the same care and love we'd give to our own children. 
+                            Every guest is welcomed as family. That's the Al Jazeera promise—a promise we've 
+                            kept for over a decade of service to the Bungoma community.
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 20px; margin-top: 30px;">
+                            <div style="width: 50px; height: 50px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-user" style="color: var(--dark);"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--light); margin-bottom: 5px;">Omar Sharif</h4>
+                                <p style="color: var(--gray); font-size: 0.9rem;">Founder & Head Chef</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="flex: 1; min-width: 300px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div style="padding: 25px; border-radius: 15px; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2);">
+                            <h4 style="color: var(--secondary); margin-bottom: 10px; font-size: 1.2rem;">2015</h4>
+                            <p style="color: var(--gray); font-size: 0.9rem;">Humble beginnings with 3 signature dishes</p>
+                        </div>
+                        <div style="padding: 25px; border-radius: 15px; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2);">
+                            <h4 style="color: var(--secondary); margin-bottom: 10px; font-size: 1.2rem;">50+</h4>
+                            <p style="color: var(--gray); font-size: 0.9rem;">Menu items crafted with perfection</p>
+                        </div>
+                        <div style="padding: 25px; border-radius: 15px; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2);">
+                            <h4 style="color: var(--secondary); margin-bottom: 10px; font-size: 1.2rem;">24/7</h4>
+                            <p style="color: var(--gray); font-size: 0.9rem;">Guest rooms & football lounge service</p>
+                        </div>
+                        <div style="padding: 25px; border-radius: 15px; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2);">
+                            <h4 style="color: var(--secondary); margin-bottom: 10px; font-size: 1.2rem;">100%</h4>
+                            <p style="color: var(--gray); font-size: 0.9rem;">Family owned & operated</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer Section -->
+    <section id="services" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What We Offer</h2>
+                <p class="section-subtitle">
+                    Four pillars of hospitality that make Al Jazeera Bungoma's favorite spot
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card glass">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="service-title">Restaurant</h3>
+                    <p class="service-desc">
+                        100% halal, home-cooked Swahili & coastal cuisine. Breakfast from 6am, 
+                        daily specials, and our famous Friday biryani. Catering available for all events.
+                    </p>
+                    <a href="#menu" class="btn btn-secondary" style="padding: 12px 25px; font-size: 0.9rem;">
+                        View Menu
+                    </a>
+                </div>
+                
+                <div class="service-card glass">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3 class="service-title">Guest Rooms</h3>
+                    <p class="service-desc">
+                        Clean, comfortable rooms with free WiFi, safe parking, and daily housekeeping. 
+                        Perfect for travelers, professionals, and families visiting Bungoma.
+                    </p>
+                    <a href="#contact" class="btn btn-secondary" style="padding: 12px 25px; font-size: 0.9rem;">
+                        Book Room
+                    </a>
+                </div>
+                
+                <div class="service-card glass">
+                    <div class="service-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <h3 class="service-title">Football Lounge</h3>
+                    <p class="service-desc">
+                        Bungoma's ultimate sports destination. Large HD screens, match-day atmosphere, 
+                        group seating, and special menus for Premier League & Champions League nights.
+                    </p>
+                    <a href="#football" class="btn btn-secondary" style="padding: 12px 25px; font-size: 0.9rem;">
+                        View Schedule
+                    </a>
+                </div>
+                
+                <div class="service-card glass">
+                    <div class="service-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3 class="service-title">Free WiFi Zone</h3>
+                    <p class="service-desc">
+                        High-speed internet throughout. Perfect for remote work, study, streaming, 
+                        or staying connected. Fast, reliable, and completely free for all guests.
+                    </p>
+                    <a href="#contact" class="btn btn-secondary" style="padding: 12px 25px; font-size: 0.9rem;">
+                        Visit Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Complete Menu</h2>
+                <p class="section-subtitle">
+                    All prices in Kenyan Shillings (KSh). Ask about our daily specials!
+                </p>
+            </div>
+            
+            <div class="menu-filters">
+                <button class="filter-btn active" data-category="all">All Items</button>
+                <button class="filter-btn" data-category="breakfast">Breakfast</button>
+                <button class="filter-btn" data-category="rice">Rice & Pilau</button>
+                <button class="filter-btn" data-category="chicken">Chicken</button>
+                <button class="filter-btn" data-category="snacks">Snacks</button>
+                <button class="filter-btn" data-category="drinks">Drinks</button>
+                <button class="filter-btn" data-category="ugali">Ugali Dishes</button>
+            </div>
+            
+            <div class="menu-grid" id="menuGrid">
+                <!-- Menu items will be loaded by JavaScript -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://wa.me/254700488888?text=Hi%20Al%20Jazeera!%20I%20want%20to%20place%20an%20order%20from%20your%20menu." 
+                   class="btn btn-whatsapp" target="_blank" style="min-width: 250px;">
+                    <i class="fab fa-whatsapp"></i> Order Now via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Football Zone -->
+    <section id="football" class="football-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Football & Chill Zone</h2>
+                <p class="section-subtitle">
+                    Where Bungoma comes together for the beautiful game
+                </p>
+            </div>
+            
+            <div class="football-content glass">
+                <h3 style="color: var(--light); font-size: 1.8rem; margin-bottom: 20px;">
+                    ⚽ Match Days · Large Screens · Electric Atmosphere
+                </h3>
+                <p style="color: var(--gray); margin-bottom: 30px; line-height: 1.8;">
+                    Every game feels bigger at Al Jazeera. We're Bungoma's official home for football fans—from 
+                    Premier League weekends to Champions League nights. Bring your crew, order a feast, and 
+                    experience match day like never before.
+                </p>
+                
+                <div class="match-countdown">
+                    <h4 class="countdown-title">Next Big Match Countdown</h4>
+                    <div class="countdown-timer">
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="days">00</div>
+                            <div class="countdown-label">Days</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="hours">00</div>
+                            <div class="countdown-label">Hours</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="minutes">00</div>
+                            <div class="countdown-label">Minutes</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="seconds">00</div>
+                            <div class="countdown-label">Seconds</div>
+                        </div>
+                    </div>
+                    <p style="color: var(--gray); margin-top: 20px; font-size: 0.9rem;">
+                        Premier League: Manchester United vs Arsenal • Saturday, 8:00 PM
+                    </p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 40px;">
+                    <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                        <i class="fas fa-tv" style="color: var(--secondary); font-size: 2rem; margin-bottom: 15px;"></i>
+                        <h4 style="color: var(--light); margin-bottom: 10px;">Large HD Screens</h4>
+                        <p style="color: var(--gray); font-size: 0.9rem;">Crystal clear viewing from every angle</p>
+                    </div>
+                    <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                        <i class="fas fa-utensils" style="color: var(--secondary); font-size: 2rem; margin-bottom: 15px;"></i>
+                        <h4 style="color: var(--light); margin-bottom: 10px;">Match Day Specials</h4>
+                        <p style="color: var(--gray); font-size: 0.9rem;">Special menu for game nights</p>
+                    </div>
+                    <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                        <i class="fas fa-users" style="color: var(--secondary); font-size: 2rem; margin-bottom: 15px;"></i>
+                        <h4 style="color: var(--light); margin-bottom: 10px;">Group Bookings</h4>
+                        <p style="color: var(--gray); font-size: 0.9rem;">Reserve space for your crew</p>
+                    </div>
+                    <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                        <i class="fas fa-clock" style="color: var(--secondary); font-size: 2rem; margin-bottom: 15px;"></i>
+                        <h4 style="color: var(--light); margin-bottom: 10px;">Open Late</h4>
+                        <p style="color: var(--gray); font-size: 0.9rem;">Extended hours for big matches</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="https://wa.me/254700488888?text=Hi!%20I%20want%20to%20reserve%20space%20for%20the%20football%20match%20on%20[date]." 
+                       class="btn btn-primary" target="_blank">
+                        <i class="fas fa-calendar-alt"></i> Reserve Your Spot
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Booking -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Book Your Experience</h2>
+                <p class="section-subtitle">
+                    Reserve a table, book a room, or inquire about catering
+                </p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info glass">
+                    <h3 style="color: var(--light); font-size: 1.8rem; margin-bottom: 30px;">
+                        Get In Touch
+                    </h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Our Location</h4>
+                            <p>HH76+269, Bungoma Town, Kenya</p>
+                            <a href="https://maps.google.com/?q=Al+Jazeera+Cafe+Bungoma" 
+                               target="_blank" 
+                               style="color: var(--secondary); text-decoration: none; font-size: 0.9rem;">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone & WhatsApp</h4>
+                            <p>+254 700 488888</p>
+                            <p>24/7 for reservations</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Opening Hours</h4>
+                            <p>Restaurant: 6:00 AM - 11:00 PM Daily</p>
+                            <p>Rooms: 24/7 Check-in Available</p>
+                            <p>Football Lounge: Open Late for Matches</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-concierge-bell"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Services</h4>
+                            <p>• 100% Halal Restaurant</p>
+                            <p>• Comfortable Guest Rooms</p>
+                            <p>• Football Sports Lounge</p>
+                            <p>• Catering & Events</p>
+                            <p>• Free High-Speed WiFi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="booking-form glass">
+                    <h3 style="color: var(--light); font-size: 1.8rem; margin-bottom: 30px;">
+                        Quick Booking Request
+                    </h3>
+                    <p style="color: var(--gray); margin-bottom: 30px;">
+                        Send us your details and we'll confirm your booking via WhatsApp within minutes.
+                    </p>
+                    
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" id="name" required placeholder="Your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Phone Number *</label>
+                            <input type="tel" class="form-control" id="phone" required placeholder="+254 XXX XXX XXX">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">What would you like to book? *</label>
+                            <select class="form-control" id="service" required>
+                                <option value="">Select service</option>
+                                <option value="table">Table at Restaurant</option>
+                                <option value="room">Guest Room</option>
+                                <option value="football">Football Lounge Space</option>
+                                <option value="catering">Catering Service</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Preferred Date & Time</label>
+                            <input type="text" class="form-control" id="datetime" placeholder="e.g., Tomorrow at 7 PM">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Additional Notes</label>
+                            <textarea class="form-control" id="notes" rows="3" placeholder="Special requests, number of people, etc."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px;">
+                            <i class="fab fa-whatsapp"></i> Send Booking Request via WhatsApp
+                        </button>
+                        
+                        <p style="color: var(--gray); margin-top: 20px; font-size: 0.85rem; text-align: center;">
+                            We'll open WhatsApp with your pre-filled booking details for instant confirmation.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Al Jazeera Cafe</h4>
+                    <p>
+                        Bungoma's home for authentic Swahili cuisine, comfortable accommodation, 
+                        and community spirit since 2015. Family owned and operated with love.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/254700488888" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Our Story</a></li>
+                        <li><a href="#menu"><i class="fas fa-chevron-right"></i> Full Menu</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#football"><i class="fas fa-chevron-right"></i> Football Zone</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Book Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://maps.google.com/?q=Al+Jazeera+Cafe+Bungoma" target="_blank">
+                            <i class="fas fa-map-marker-alt"></i> HH76+269, Bungoma, Kenya
+                        </a></li>
+                        <li><a href="tel:+254700488888">
+                            <i class="fas fa-phone"></i> +254 700 488888
+                        </a></li>
+                        <li><a href="https://wa.me/254700488888" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Booking
+                        </a></li>
+                        <li><i class="fas fa-clock"></i> 6:00 AM - 11:00 PM Daily</li>
+                        <li><i class="fas fa-hands"></i> 100% Halal Certified</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Popular Menu Items</h4>
+                    <ul class="footer-links">
+                        <li><a href="#menu"><i class="fas fa-star"></i> Friday Biryani Special</a></li>
+                        <li><a href="#menu"><i class="fas fa-star"></i> Pilau Chicken Kienyeji</a></li>
+                        <li><a href="#menu"><i class="fas fa-star"></i> Whole Chicken (KSh 850)</a></li>
+                        <li><a href="#menu"><i class="fas fa-star"></i> Chips & Fish</a></li>
+                        <li><a href="#menu"><i class="fas fa-star"></i> Ugali with Beef Stew</a></li>
+                        <li><a href="#menu"><i class="fas fa-star"></i> Traditional Porridge (Uji)</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2025</span> Al Jazeera Cafe Restaurant & Hotel, Bungoma. All rights reserved.</p>
+                <p style="color: var(--secondary); margin-top: 10px; font-weight: 600;">
+                    Family Owned · Serving Bungoma With Heart · Part of Our Community Since 2015
+                </p>
+                <p style="color: var(--gray); margin-top: 10px; font-size: 0.8rem;">
+                    This website was created with gratitude for the Al Jazeera family's years of warm service.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating UI Elements -->
+    <a href="https://wa.me/254700488888?text=Hi%20Al%20Jazeera%20Cafe!%20I'm%20interested%20in%20your%20services." 
+       class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <button id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+    // ===== LOADER =====
+    window.addEventListener('load', function() {
+        const loader = document.getElementById('loader');
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 500);
+    });
+
+    // ===== MENU DATA =====
+    const menuItems = [
+        // Breakfast
+        { id: 1, name: "Full Breakfast", category: "breakfast", price: "KSh 270", 
+          description: "Complete morning meal with eggs, sausages, toast, tea/coffee" },
+        { id: 2, name: "Tea / Black Tea / Lemon Tea", category: "breakfast", price: "KSh 40", 
+          description: "Hot traditional tea options" },
+        { id: 3, name: "White Coffee", category: "breakfast", price: "KSh 100", 
+          description: "Creamy coffee with fresh milk" },
+        { id: 4, name: "White Chocolate", category: "breakfast", price: "KSh 100", 
+          description: "Rich white hot chocolate" },
+        { id: 5, name: "Fresh Milk (Glass)", category: "breakfast", price: "KSh 80", 
+          description: "Cold fresh milk" },
+        { id: 6, name: "Traditional Porridge (Uji)", category: "breakfast", price: "KSh 70", 
+          description: "Warm, nutritious traditional porridge" },
+        
+        // Rice & Pilau
+        { id: 7, name: "Plain White Rice", category: "rice", price: "KSh 100", 
+          description: "Steamed basmati rice" },
+        { id: 8, name: "Pilau Plain", category: "rice", price: "KSh 180", 
+          description: "Aromatic spiced rice with traditional spices" },
+        { id: 9, name: "Rice with Beef Stew", category: "rice", price: "KSh 350", 
+          description: "Rice served with rich beef stew" },
+        { id: 10, name: "Friday Special: Biryani", category: "rice", price: "KSh 380", 
+          description: "Layered rice with meat and spices (Friday only)" },
+        { id: 11, name: "Pilau Chicken Kienyeji", category: "rice", price: "KSh 430", 
+          description: "Spiced rice with free-range chicken" },
+        { id: 12, name: "Pilau Beef Fry", category: "rice", price: "KSh 430", 
+          description: "Spiced rice with fried beef" },
+        
+        // Chicken
+        { id: 13, name: "¼ Chicken", category: "chicken", price: "KSh 250", 
+          description: "Quarter chicken, grilled or fried" },
+        { id: 14, name: "½ Chicken", category: "chicken", price: "KSh 450", 
+          description: "Half chicken serving" },
+        { id: 15, name: "Whole Chicken", category: "chicken", price: "KSh 850", 
+          description: "Complete chicken meal" },
+        { id: 16, name: "¼ Chicken Kienyeji", category: "chicken", price: "KSh 280", 
+          description: "Quarter free-range chicken" },
+        { id: 17, name: "½ Chicken Kienyeji", category: "chicken", price: "KSh 500", 
+          description: "Half free-range chicken" },
+        { id: 18, name: "Whole Chicken Kienyeji", category: "chicken", price: "KSh 900", 
+          description: "Complete free-range chicken" },
+        
+        // Snacks
+        { id: 19, name: "Andazi / Mandazi", category: "snacks", price: "KSh 20", 
+          description: "Traditional Swahili doughnuts (2 pieces)" },
+        { id: 20, name: "Chapati", category: "snacks", price: "KSh 30", 
+          description: "Freshly made flatbread" },
+        { id: 21, name: "Samosa", category: "snacks", price: "KSh 40", 
+          description: "Crispy pastry with beef/vegetable filling (2 pieces)" },
+        { id: 22, name: "Kebab", category: "snacks", price: "KSh 70", 
+          description: "Grilled beef kebabs (2 skewers)" },
+        { id: 23, name: "Viazi Karai", category: "snacks", price: "KSh 100", 
+          description: "Crispy fried potatoes with spices" },
+        { id: 24, name: "Omelette", category: "snacks", price: "KSh 120", 
+          description: "Two-egg omelette with vegetables" },
+        
+        // Drinks
+        { id: 25, name: "Black Coffee / Black Chocolate", category: "drinks", price: "KSh 40", 
+          description: "Strong black coffee or chocolate" },
+        { id: 26, name: "Fresh Juice (Orange/Mango)", category: "drinks", price: "KSh 120", 
+          description: "Freshly squeezed fruit juice" },
+        { id: 27, name: "Soda (Coke/Fanta/Sprite)", category: "drinks", price: "KSh 80", 
+          description: "330ml canned soda" },
+        { id: 28, name: "Bottled Water (500ml)", category: "drinks", price: "KSh 50", 
+          description: "Mineral water" },
+        
+        // Chips & Combos
+        { id: 29, name: "Chips Plain", category: "chips", price: "KSh 150", 
+          description: "Freshly fried potato chips" },
+        { id: 30, name: "Chips Masala", category: "chips", price: "KSh 170", 
+          description: "Chips with masala spices" },
+        { id: 31, name: "Chips & Sausage", category: "chips", price: "KSh 200", 
+          description: "Chips with two sausages" },
+        { id: 32, name: "Chips & Kebab", category: "chips", price: "KSh 220", 
+          description: "Chips with two beef kebabs" },
+        { id: 33, name: "Chips & ¼ Chicken", category: "chips", price: "KSh 400", 
+          description: "Chips with quarter chicken" },
+        { id: 34, name: "Chips & Fish", category: "chips", price: "KSh 400", 
+          description: "Chips with fried fish fillet" },
+        
+        // Ugali Dishes
+        { id: 35, name: "Ugali Plain", category: "ugali", price: "KSh 60", 
+          description: "Traditional maize meal" },
+        { id: 36, name: "Ugali with Beans/Ndengu", category: "ugali", price: "KSh 120", 
+          description: "Ugali with beans or lentils" },
+        { id: 37, name: "Ugali with Vegetables", category: "ugali", price: "KSh 120", 
+          description: "Ugali with sautéed vegetables" },
+        { id: 38, name: "Ugali with Beef Stew", category: "ugali", price: "KSh 310", 
+          description: "Ugali with rich beef stew" },
+        { id: 39, name: "Ugali with ¼ Chicken", category: "ugali", price: "KSh 330", 
+          description: "Ugali with quarter chicken" },
+        { id: 40, name: "Ugali with Fish (Tilapia)", category: "ugali", price: "KSh 400", 
+          description: "Ugali with whole fried tilapia" },
+        
+        // Chapati Combinations
+        { id: 41, name: "Chapati with Vegetables", category: "chapati", price: "KSh 90", 
+          description: "Chapati with sautéed vegetables" },
+        { id: 42, name: "Chapati with Beans", category: "chapati", price: "KSh 90", 
+          description: "Chapati with beans" },
+        { id: 43, name: "Chapati with Beef Fry", category: "chapati", price: "KSh 250", 
+          description: "Chapati with fried beef" },
+        { id: 44, name: "Chapati with ¼ Chicken", category: "chapati", price: "KSh 300", 
+          description: "Chapati with quarter chicken" }
+    ];
+
+    // ===== DOM ELEMENTS =====
+    const menuGrid = document.getElementById('menuGrid');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navbar = document.getElementById('navbar');
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    const bookingForm = document.getElementById('bookingForm');
+    const currentYearSpan = document.getElementById('currentYear');
+
+    // ===== INITIALIZE MENU =====
+    function initializeMenu() {
+        menuGrid.innerHTML = '';
+        
+        menuItems.forEach(item => {
+            const menuCard = document.createElement('div');
+            menuCard.className = 'menu-card glass';
+            menuCard.setAttribute('data-category', item.category);
+            
+            menuCard.innerHTML = `
+                <span class="menu-category">${item.category.toUpperCase()}</span>
+                <div class="menu-item-header">
+                    <h3 class="menu-item-title">${item.name}</h3>
+                    <span class="menu-price">${item.price}</span>
+                </div>
+                <p class="menu-description">${item.description}</p>
+                <div class="menu-actions">
+                    <button class="btn btn-secondary" onclick="orderItem('${item.name}', '${item.price}')" 
+                            style="padding: 10px 20px; font-size: 0.9rem;">
+                        <i class="fas fa-shopping-cart"></i> Order Now
+                    </button>
+                    <button class="btn" onclick="inquireItem('${item.name}')" 
+                            style="padding: 10px 20px; font-size: 0.9rem; background: rgba(255,255,255,0.05); color: var(--light); border: 1px solid rgba(255,255,255,0.1);">
+                        <i class="fas fa-question-circle"></i> Ask
+                    </button>
+                </div>
+            `;
+            
+            menuGrid.appendChild(menuCard);
+        });
+    }
+
+    // ===== MENU FILTERING =====
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const category = btn.dataset.category;
+            const cards = document.querySelectorAll('.menu-card');
+            
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+
+    // ===== ORDER FUNCTION =====
+    function orderItem(itemName, price) {
+        const message = `Hi Al Jazeera Cafe! I'd like to order: ${itemName} (${price}).`;
+        const whatsappUrl = `https://wa.me/254700488888?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    }
+
+    function inquireItem(itemName) {
+        const message = `Hi! I have a question about ${itemName} on your menu.`;
+        const whatsappUrl = `https://wa.me/254700488888?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    }
+
+    // ===== MOBILE MENU TOGGLE =====
+    mobileToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        mobileToggle.innerHTML = navMenu.classList.contains('active') 
+            ? '<i class="fas fa-times"></i>' 
+            : '<i class="fas fa-bars"></i>';
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+    });
+
+    // ===== NAVBAR SCROLL EFFECT =====
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        
+        scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+
+    // ===== SMOOTH SCROLLING =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // ===== SCROLL TO TOP =====
+    scrollBtn.onclick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // ===== FOOTBALL COUNTDOWN =====
+    function updateCountdown() {
+        const targetDate = new Date();
+        targetDate.setDate(targetDate.getDate() + 2); // 2 days from now
+        targetDate.setHours(20, 0, 0, 0); // 8:00 PM
+        
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+        
+        if (distance < 0) {
+            targetDate.setDate(targetDate.getDate() + 7);
+            const newDistance = targetDate - now;
+            updateDisplay(newDistance);
+        } else {
+            updateDisplay(distance);
+        }
+    }
+    
+    function updateDisplay(distance) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        document.getElementById('days').textContent = days.toString().padStart(2, '0');
+        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+
+    // ===== BOOKING FORM =====
+    bookingForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const service = document.getElementById('service').value;
+        const datetime = document.getElementById('datetime').value;
+        const notes = document.getElementById('notes').value;
+        
+        const serviceText = {
+            'table': 'Table at Restaurant',
+            'room': 'Guest Room',
+            'football': 'Football Lounge Space',
+            'catering': 'Catering Service',
+            'other': 'Other Inquiry'
+        }[service] || service;
+        
+        const message = `*NEW BOOKING REQUEST*%0A%0A` +
+                       `*Name:* ${name}%0A` +
+                       `*Phone:* ${phone}%0A` +
+                       `*Service:* ${serviceText}%0A` +
+                       `*Preferred Date/Time:* ${datetime || 'Flexible'}%0A` +
+                       `*Notes:* ${notes || 'None'}%0A%0A` +
+                       `_Sent via Al Jazeera Website_`;
+        
+        const whatsappUrl = `https://wa.me/254700488888?text=${message}`;
+        window.open(whatsappUrl, '_blank');
+        
+        // Reset form
+        bookingForm.reset();
+        
+        // Show confirmation
+        alert('Thank you! Opening WhatsApp to send your booking details...');
+    });
+
+    // ===== INITIALIZE ON LOAD =====
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeMenu();
+        
+        // Set current year
+        currentYearSpan.textContent = new Date().getFullYear();
+        
+        // Initialize countdown
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+        
+        // Add scroll animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.menu-card, .service-card, .contact-item, .countdown-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+        
+        // Add active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    });
+    </script>
+
+    <!-- Free AI Chatbot (Tidio) - Add your own ID -->
+    <!-- 
+    <script src="//code.tidio.co/YOUR_ID.js" async></script>
+    -->
+</body>
+</html>
